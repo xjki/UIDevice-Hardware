@@ -126,6 +126,14 @@
     if ([modelIdentifier isEqualToString:@"iPad7,2"])      return @"iPad Pro (12.9 inch) 2G (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad7,3"])      return @"iPad Pro (10.5 inch) 1G (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad7,4"])      return @"iPad Pro (10.5 inch) 1G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,1"])      return @"iPad Pro (11 inch) (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,2"])      return @"iPad Pro (11 inch) (Wi-Fi)"; // 6GB RAM version, up to 1TB disk
+    if ([modelIdentifier isEqualToString:@"iPad8,3"])      return @"iPad Pro (11 inch) (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,4"])      return @"iPad Pro (11 inch) (Cellular)"; // 6GB RAM version, up to 1TB disk
+    if ([modelIdentifier isEqualToString:@"iPad8,5"])      return @"iPad Pro (12.9 inch) 3G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,6"])      return @"iPad Pro (12.9 inch) 3G (Wi-Fi)";  // 6GB RAM version, up to 1TB disk
+    if ([modelIdentifier isEqualToString:@"iPad8,7"])      return @"iPad Pro (12.9 inch) 3G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,8"])      return @"iPad Pro (12.9 inch) 3G (Cellular)"; // 6GB RAM version, up to 1TB disk
 
     // iPod http://theiphonewiki.com/wiki/IPod
 
