@@ -43,6 +43,27 @@
 
 - (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier
 {
+    // Apple Watch https://www.theiphonewiki.com/wiki/List_of_Apple_Watches
+    
+    if ([modelIdentifier isEqualToString:@"Watch1,1"])    return @"Watch S0 (38mm)"; // 1st generation - Series Zero
+    if ([modelIdentifier isEqualToString:@"Watch1,2"])    return @"Watch S0 (42mm)";  // 1st generation - Series Zero
+    if ([modelIdentifier isEqualToString:@"Watch2,6"])    return @"Watch S1 (38mm)";
+    if ([modelIdentifier isEqualToString:@"Watch2,7"])    return @"Watch S1 (42mm)";
+    if ([modelIdentifier isEqualToString:@"Watch2,3"])    return @"Watch S2 (38mm)";
+    if ([modelIdentifier isEqualToString:@"Watch2,4"])    return @"Watch S2 (42mm)";
+    if ([modelIdentifier isEqualToString:@"Watch3,1"])    return @"Watch S3 (38mm)";
+    if ([modelIdentifier isEqualToString:@"Watch3,2"])    return @"Watch S3 (42mm)";
+    if ([modelIdentifier isEqualToString:@"Watch3,3"])    return @"Watch S3 Cellular (38mm)";
+    if ([modelIdentifier isEqualToString:@"Watch3,4"])    return @"Watch S3 Cellular (42mm)";
+    if ([modelIdentifier isEqualToString:@"Watch4,1"])    return @"Watch S4 (40mm)";
+    if ([modelIdentifier isEqualToString:@"Watch4,2"])    return @"Watch S4 (44mm)";
+    if ([modelIdentifier isEqualToString:@"Watch4,3"])    return @"Watch S4 Cellular (40mm)";
+    if ([modelIdentifier isEqualToString:@"Watch4,4"])    return @"Watch S4 Cellular (44mm)";
+    if ([modelIdentifier isEqualToString:@"Watch5,1"])    return @"Watch S5 (40mm)";
+    if ([modelIdentifier isEqualToString:@"Watch5,2"])    return @"Watch S5 (44mm)";
+    if ([modelIdentifier isEqualToString:@"Watch5,3"])    return @"Watch S5 Cellular (40mm)";
+    if ([modelIdentifier isEqualToString:@"Watch5,4"])    return @"Watch S5 Cellular (44mm)";
+    
     // iPhone http://theiphonewiki.com/wiki/IPhone
 
     if ([modelIdentifier isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
@@ -77,6 +98,9 @@
     if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
     if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max (China)"; // China dual-sim
     if ([modelIdentifier isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
+    if ([modelIdentifier isEqualToString:@"iPhone12,1"])   return @"iPhone 11";
+    if ([modelIdentifier isEqualToString:@"iPhone12,3"])   return @"iPhone 11 Pro";
+    if ([modelIdentifier isEqualToString:@"iPhone12,5"])   return @"iPhone 11 Pro Max";
 
     // iPad http://theiphonewiki.com/wiki/IPad
 
@@ -98,9 +122,14 @@
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
-
+    if ([modelIdentifier isEqualToString:@"iPad11,3"])     return @"iPad Air 3 (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad11,4"])     return @"iPad Air 3 (Cellular)";
+    
     if ([modelIdentifier isEqualToString:@"iPad7,5"])      return @"iPad 6G (WiFi)";
     if ([modelIdentifier isEqualToString:@"iPad7,6"])      return @"iPad 6G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,11"])     return @"iPad 7G (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,12"])     return @"iPad 7G (Cellular)";
+
 
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
 
@@ -115,6 +144,8 @@
     if ([modelIdentifier isEqualToString:@"iPad4,9"])      return @"iPad mini 3G (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,1"])      return @"iPad mini 4G (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,2"])      return @"iPad mini 4G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad11,1"])     return @"iPad mini 5G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad11,2"])     return @"iPad mini 5G (Cellular)";
 
     // iPad Pro https://www.theiphonewiki.com/wiki/IPad_Pro
 
@@ -136,13 +167,14 @@
     if ([modelIdentifier isEqualToString:@"iPad8,8"])      return @"iPad Pro (12.9 inch) 3G (Cellular)"; // 6GB RAM version, up to 1TB disk
 
     // iPod http://theiphonewiki.com/wiki/IPod
-
+    
     if ([modelIdentifier isEqualToString:@"iPod1,1"])      return @"iPod touch 1G";
     if ([modelIdentifier isEqualToString:@"iPod2,1"])      return @"iPod touch 2G";
     if ([modelIdentifier isEqualToString:@"iPod3,1"])      return @"iPod touch 3G";
     if ([modelIdentifier isEqualToString:@"iPod4,1"])      return @"iPod touch 4G";
     if ([modelIdentifier isEqualToString:@"iPod5,1"])      return @"iPod touch 5G";
     if ([modelIdentifier isEqualToString:@"iPod7,1"])      return @"iPod touch 6G"; // as 6,1 was never released 7,1 is actually 6th generation
+    if ([modelIdentifier isEqualToString:@"iPod9,1"])      return @"iPod touch 7G"; // iPod8,1 was rumored to be with FaceId, never released
 
     // Apple TV https://www.theiphonewiki.com/wiki/Apple_TV
 
