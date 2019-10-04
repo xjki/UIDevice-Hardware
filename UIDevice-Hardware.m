@@ -202,6 +202,7 @@
     if ([modelIdentifier hasPrefix:@"iPod"]) return UIDeviceFamilyiPod;
     if ([modelIdentifier hasPrefix:@"iPad"]) return UIDeviceFamilyiPad;
     if ([modelIdentifier hasPrefix:@"AppleTV"]) return UIDeviceFamilyAppleTV;
+    if ([modelIdentifier hasPrefix:@"Watch"]) return UIDeviceFamilyWatch;
     return UIDeviceFamilyUnknown;
 }
 
