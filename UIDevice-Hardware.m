@@ -9,11 +9,14 @@
 #include <sys/sysctl.h>
 #import "UIDevice-Hardware.h"
 
+static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
+
 @interface UIDevice (Hardward)
 
 - (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier;
 
 @end
+
 
 @implementation UIDevice (Hardware)
 
@@ -33,7 +36,15 @@
 
 - (NSString *)modelIdentifier
 {
-    return [self getSysInfoByName:"hw.machine"];
+    if (NSProcessInfo.processInfo.environment[@"SIMULATOR_RUNTIME_VERSION"] != nil) {
+        return kiOSSimulatorIdentifier;
+    }
+    else if ([[self getSysInfoByName:"hw.targettype"] isEqualToString:@"Mac"]) {
+        return [self getSysInfoByName:"hw.model"]; // Returns hardware model for Mac devices (Mac OS 10.15)
+    }
+    else {
+        return [self getSysInfoByName:"hw.machine"]; // Returns hardware model for iOS devices
+    }
 }
 
 - (NSString *)modelName
@@ -190,8 +201,18 @@
     if ([modelIdentifier isEqualToString:@"AppleTV5,3"])      return @"Apple TV 4G"; // as 4,1 was never released, 5,1 is actually 4th generation
     if ([modelIdentifier isEqualToString:@"AppleTV6,2"])      return @"Apple TV (4K)";
 
+
+    // Mac (return only device class, not particular model) https://everymac.com/systems/by_capability/mac-specs-by-machine-model-machine-id.html
+    if ([modelIdentifier hasPrefix:@"iMacPro"])            return @"iMac Pro";
+    if ([modelIdentifier hasPrefix:@"iMac"])               return @"iMac";
+    if ([modelIdentifier hasPrefix:@"Macmini"])            return @"Mac Mini";
+    if ([modelIdentifier hasPrefix:@"MacBookPro"])         return @"MacBook Pro";
+    if ([modelIdentifier hasPrefix:@"iMacBookAir"])        return @"Macbook Air";
+    if ([modelIdentifier hasPrefix:@"MacBook"])            return @"MacBook";
+    if ([modelIdentifier hasPrefix:@"Xserve"])             return @"Xserve";
+    
     // Simulator
-    if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
+    if ([modelIdentifier isEqualToString:kiOSSimulatorIdentifier] || [modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
         BOOL smallerScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
         return (smallerScreen ? @"iPhone Simulator" : @"iPad Simulator");
@@ -208,6 +229,7 @@
     if ([modelIdentifier hasPrefix:@"iPad"]) return UIDeviceFamilyiPad;
     if ([modelIdentifier hasPrefix:@"AppleTV"]) return UIDeviceFamilyAppleTV;
     if ([modelIdentifier hasPrefix:@"Watch"]) return UIDeviceFamilyWatch;
+    if ([modelIdentifier containsString:@"Mac"] || [modelIdentifier hasPrefix:@"Xserve"]) return UIDeviceFamilyMac;
     return UIDeviceFamilyUnknown;
 }
 
