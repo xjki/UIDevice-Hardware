@@ -39,12 +39,12 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if (NSProcessInfo.processInfo.environment[@"SIMULATOR_RUNTIME_VERSION"] != nil) {
         return kiOSSimulatorIdentifier;
     }
-    else if ([[self getSysInfoByName:"hw.targettype"] isEqualToString:@"Mac"]) {
-        return [self getSysInfoByName:"hw.model"]; // Returns hardware model for Mac devices (Mac OS 10.15)
+    NSString *model = [self getSysInfoByName:"hw.machine"]; // Returns hardware model for iOS devices
+    if ([model isEqualToString:@"x86_64"]) {
+         // Returns hardware model for Intel Mac devices (Mac OS 10.15)
+        return [self getSysInfoByName:"hw.model"];
     }
-    else {
-        return [self getSysInfoByName:"hw.machine"]; // Returns hardware model for iOS devices
-    }
+    return model;
 }
 
 - (NSString *)modelName
