@@ -4,6 +4,7 @@
  BSD License, Use at your own risk
 
  Modified by Eric Horacek for Monospace Ltd. on 2/4/13
+ Modified by Jurgis Kirsakmens for E-protect on 2021-01-25
  */
 
 #include <sys/sysctl.h>
@@ -11,7 +12,7 @@
 
 static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
 
-@interface UIDevice (Hardward)
+@interface UIDevice (Hardware)
 
 - (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier;
 
@@ -34,23 +35,36 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     return results;
 }
 
+
+- (BOOL)isiOSAppOnMac {
+    if (@available(iOS 14, macCatalyst 14, macOS 11, *)) {
+        return NSProcessInfo.processInfo.isMacCatalystApp || NSProcessInfo.processInfo.isiOSAppOnMac;
+    }
+    if (@available(iOS 13, macCatalyst 13, macOS 10.15, *)) {
+        return NSProcessInfo.processInfo.isMacCatalystApp;
+    }
+    return NO;
+}
+
+
 - (NSString *)modelIdentifier
 {
     if (NSProcessInfo.processInfo.environment[@"SIMULATOR_RUNTIME_VERSION"] != nil) {
         return kiOSSimulatorIdentifier;
     }
-    NSString *model = [self getSysInfoByName:"hw.machine"]; // Returns hardware model for iOS devices
-    if ([model isEqualToString:@"x86_64"]) {
-         // Returns hardware model for Intel Mac devices (Mac OS 10.15)
-        return [self getSysInfoByName:"hw.model"];
+    NSString *model = [self getSysInfoByName:"hw.machine"]; // Returns hardware model for iOS device on iOS
+    if ([model isEqualToString:@"x86_64"] || [model isEqualToString:@"arm64"] || [self isiOSAppOnMac]) {
+        return [self getSysInfoByName:"hw.model"]; // Returns hardware model for Mac on macOS
     }
     return model;
 }
+
 
 - (NSString *)modelName
 {
     return [self modelNameForModelIdentifier:[self modelIdentifier]];
 }
+
 
 - (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier
 {
@@ -194,7 +208,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad8,3"])      return @"iPad Pro 11″ (1gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad8,4"])      return @"iPad Pro 11″ (1gen, Cellular)"; // 6GB RAM version, up to 1TB disk
         if ([modelIdentifier isEqualToString:@"iPad8,5"])      return @"iPad Pro 12.9″ (3gen, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad8,6"])      return @"iPad Pro 12.9″ (3gen, Wi-Fi)";  // 6GB RAM version, up to 1TB disk
+        if ([modelIdentifier isEqualToString:@"iPad8,6"])      return @"iPad Pro 12.9″ (3gen, Wi-Fi)";  // 6GB RAM version, up to 1TB disk. Or Catalyst app running on Apple Silicon Mac.
         if ([modelIdentifier isEqualToString:@"iPad8,7"])      return @"iPad Pro 12.9″ (3gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad8,8"])      return @"iPad Pro 12.9″ (3gen, Cellular)"; // 6GB RAM version, up to 1TB disk
         if ([modelIdentifier isEqualToString:@"iPad8,9"])      return @"iPad Pro 11″ (2gen, Wi-Fi)";
@@ -231,7 +245,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if ([modelIdentifier hasPrefix:@"iMac"])               return @"iMac";
     if ([modelIdentifier hasPrefix:@"Macmini"])            return @"Mac Mini";
     if ([modelIdentifier hasPrefix:@"MacBookPro"])         return @"MacBook Pro";
-    if ([modelIdentifier hasPrefix:@"iMacBookAir"])        return @"Macbook Air";
+    if ([modelIdentifier hasPrefix:@"MacBookAir"])         return @"Macbook Air";
     if ([modelIdentifier hasPrefix:@"MacBook"])            return @"MacBook";
     if ([modelIdentifier hasPrefix:@"Xserve"])             return @"Xserve";
     
