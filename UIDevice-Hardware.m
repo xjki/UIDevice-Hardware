@@ -98,6 +98,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"Watch6,2"])    return @"Watch S6 (44mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,3"])    return @"Watch S6 Cellular (40mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,4"])    return @"Watch S6 Cellular (44mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,6"])    return @"Watch S7 (41mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,7"])    return @"Watch S7 (45mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,8"])    return @"Watch S7 Cellular (41mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,9"])    return @"Watch S7 Cellular (45mm)";
     }
 
     if ([modelIdentifier hasPrefix:@"iPhone"])
@@ -143,7 +147,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone13,2"])   return @"iPhone 12";
         if ([modelIdentifier isEqualToString:@"iPhone13,3"])   return @"iPhone 12 Pro";
         if ([modelIdentifier isEqualToString:@"iPhone13,4"])   return @"iPhone 12 Pro Max";
-
+        if ([modelIdentifier isEqualToString:@"iPhone14,2"])   return @"iPhone 13 Pro";
+        if ([modelIdentifier isEqualToString:@"iPhone14,3"])   return @"iPhone 13 Pro Max";
+        if ([modelIdentifier isEqualToString:@"iPhone14,4"])   return @"iPhone 13 mini";
+        if ([modelIdentifier isEqualToString:@"iPhone14,5"])   return @"iPhone 13";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
@@ -168,6 +175,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad7,12"])     return @"iPad (7gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad11,6"])     return @"iPad (8gen, WiFi)";
         if ([modelIdentifier isEqualToString:@"iPad11,7"])     return @"iPad (8gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad12,1"])     return @"iPad (9gen, WiFi)";
+        if ([modelIdentifier isEqualToString:@"iPad12,2"])     return @"iPad (9gen, Cellular)";
 
         // iPad Air: https://www.theiphonewiki.com/wiki/List_of_iPad_Airs
         if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (1gen, Wi-Fi)";
@@ -193,6 +202,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad5,2"])      return @"iPad mini (4gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad11,1"])     return @"iPad mini (5gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad11,2"])     return @"iPad mini (5gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad14,1"])     return @"iPad mini (6gen, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad14,2"])     return @"iPad mini (6gen, Cellular)";
 
         // iPad Pro https://www.theiphonewiki.com/wiki/IPad_Pro
         if ([modelIdentifier isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7″ (Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=9938&c=apple_ipad_pro_9.7-inch_a1673_wifi_32gb_apple_ipad_6,3
@@ -220,24 +231,25 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if ([modelIdentifier hasPrefix:@"iPod"])
     {
         // iPod http://theiphonewiki.com/wiki/IPod
-        if ([modelIdentifier isEqualToString:@"iPod1,1"])      return @"iPod touch 1G";
-        if ([modelIdentifier isEqualToString:@"iPod2,1"])      return @"iPod touch 2G";
-        if ([modelIdentifier isEqualToString:@"iPod3,1"])      return @"iPod touch 3G";
-        if ([modelIdentifier isEqualToString:@"iPod4,1"])      return @"iPod touch 4G";
-        if ([modelIdentifier isEqualToString:@"iPod5,1"])      return @"iPod touch 5G";
-        if ([modelIdentifier isEqualToString:@"iPod7,1"])      return @"iPod touch 6G"; // as 6,1 was never released 7,1 is actually 6th generation
-        if ([modelIdentifier isEqualToString:@"iPod9,1"])      return @"iPod touch 7G"; // iPod8,1 was rumored to be with FaceId, never released
+        if ([modelIdentifier isEqualToString:@"iPod1,1"])      return @"iPod touch (1gen)";
+        if ([modelIdentifier isEqualToString:@"iPod2,1"])      return @"iPod touch (2gen)";
+        if ([modelIdentifier isEqualToString:@"iPod3,1"])      return @"iPod touch (3gen)";
+        if ([modelIdentifier isEqualToString:@"iPod4,1"])      return @"iPod touch (4gen)";
+        if ([modelIdentifier isEqualToString:@"iPod5,1"])      return @"iPod touch (5gen)";
+        if ([modelIdentifier isEqualToString:@"iPod7,1"])      return @"iPod touch (6gen)";
+        if ([modelIdentifier isEqualToString:@"iPod9,1"])      return @"iPod touch (7gen)";
     }
 
     if ([modelIdentifier hasPrefix:@"AppleTV"])
     {
         // Apple TV https://www.theiphonewiki.com/wiki/Apple_TV
-        if ([modelIdentifier isEqualToString:@"AppleTV1,1"])      return @"Apple TV 1G";
-        if ([modelIdentifier isEqualToString:@"AppleTV2,1"])      return @"Apple TV 2G";
-        if ([modelIdentifier isEqualToString:@"AppleTV3,1"])      return @"Apple TV 3G";
-        if ([modelIdentifier isEqualToString:@"AppleTV3,2"])      return @"Apple TV 3G"; // small, incremental update over 3,1
-        if ([modelIdentifier isEqualToString:@"AppleTV5,3"])      return @"Apple TV 4G"; // as 4,1 was never released, 5,1 is actually 4th generation
-        if ([modelIdentifier isEqualToString:@"AppleTV6,2"])      return @"Apple TV (4K)";
+        if ([modelIdentifier isEqualToString:@"AppleTV1,1"])      return @"Apple TV (1gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV2,1"])      return @"Apple TV (2gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV3,1"])      return @"Apple TV (3gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV3,2"])      return @"Apple TV (3gen)"; // small, incremental update over 3,1
+        if ([modelIdentifier isEqualToString:@"AppleTV5,3"])      return @"Apple TV (4gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV6,2"])      return @"Apple TV 4K (1gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV11,1"])     return @"Apple TV 4K (2gen)";
     }
 
     // Mac (return only device class, not particular model) https://everymac.com/systems/by_capability/mac-specs-by-machine-model-machine-id.html
