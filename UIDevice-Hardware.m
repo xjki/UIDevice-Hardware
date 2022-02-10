@@ -226,6 +226,14 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad8,10"])     return @"iPad Pro 11″ (2gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad8,11"])     return @"iPad Pro 12.9″ (4gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad8,12"])     return @"iPad Pro 12.9″ (4gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad13,4"])     return @"iPad Pro 11″ (3gen, Wi-Fi)"; // M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,5"])     return @"iPad Pro 11″ (3gen, Cellular)"; // Cellular with mmWave (US) version, M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,6"])     return @"iPad Pro 11″ (3gen, Cellular)"; // Global version, M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,7"])     return @"iPad Pro 11″ (3gen, Cellular)"; // China version, M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,8"])     return @"iPad Pro 12.9″ (5gen, Wi-Fi)"; // M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,9"])     return @"iPad Pro 12.9″ (5gen, Cellular)"; // Cellular with mmWave (US) version, M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,10"])    return @"iPad Pro 12.9″ (5gen, Cellular)"; // Global version, M1 CPU
+        if ([modelIdentifier isEqualToString:@"iPad13,11"])    return @"iPad Pro 12.9″ (5gen, Cellular)"; // China version, M1 CPU
     }
 
     if ([modelIdentifier hasPrefix:@"iPod"])
