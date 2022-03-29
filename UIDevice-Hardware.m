@@ -151,6 +151,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone14,3"])   return @"iPhone 13 Pro Max";
         if ([modelIdentifier isEqualToString:@"iPhone14,4"])   return @"iPhone 13 mini";
         if ([modelIdentifier isEqualToString:@"iPhone14,5"])   return @"iPhone 13";
+        if ([modelIdentifier isEqualToString:@"iPhone14,6"])   return @"iPhone SE 3G";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
@@ -187,6 +188,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad11,4"])     return @"iPad Air (3gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad13,1"])     return @"iPad Air (4gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad13,2"])     return @"iPad Air (4gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad13,16"])     return @"iPad Air (5gen, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad13,17"])     return @"iPad Air (5gen, Cellular)";
 
         // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
         if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad mini (1gen, Wi-Fi)";
@@ -268,6 +271,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if ([modelIdentifier hasPrefix:@"MacBookAir"])         return @"Macbook Air";
     if ([modelIdentifier hasPrefix:@"MacBook"])            return @"MacBook";
     if ([modelIdentifier hasPrefix:@"Xserve"])             return @"Xserve";
+    if ([modelIdentifier hasPrefix:@"Mac13"])              return @"Mac Studio"; // "Mac13,1" (Max) and "Mac13,2" (Ultra)
     
     // Simulator
     if ([modelIdentifier isEqualToString:kiOSSimulatorIdentifier] || [modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
