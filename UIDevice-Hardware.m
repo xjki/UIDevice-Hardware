@@ -90,10 +90,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"Watch5,2"])    return @"Watch S5 (44mm)";
         if ([modelIdentifier isEqualToString:@"Watch5,3"])    return @"Watch S5 Cellular (40mm)";
         if ([modelIdentifier isEqualToString:@"Watch5,4"])    return @"Watch S5 Cellular (44mm)";
-        if ([modelIdentifier isEqualToString:@"Watch5,9"])    return @"Watch SE (40mm)";
-        if ([modelIdentifier isEqualToString:@"Watch5,10"])   return @"Watch SE (44mm)";
-        if ([modelIdentifier isEqualToString:@"Watch5,11"])   return @"Watch SE Cellular (40mm)";
-        if ([modelIdentifier isEqualToString:@"Watch5,12"])   return @"Watch SE Cellular (44mm)";
+        if ([modelIdentifier isEqualToString:@"Watch5,9"])    return @"Watch SE 1gen (40mm)";
+        if ([modelIdentifier isEqualToString:@"Watch5,10"])   return @"Watch SE 1gen (44mm)";
+        if ([modelIdentifier isEqualToString:@"Watch5,11"])   return @"Watch SE 1gen Cellular (40mm)";
+        if ([modelIdentifier isEqualToString:@"Watch5,12"])   return @"Watch SE 1gen Cellular (44mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,1"])    return @"Watch S6 (40mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,2"])    return @"Watch S6 (44mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,3"])    return @"Watch S6 Cellular (40mm)";
@@ -102,6 +102,15 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"Watch6,7"])    return @"Watch S7 (45mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,8"])    return @"Watch S7 Cellular (41mm)";
         if ([modelIdentifier isEqualToString:@"Watch6,9"])    return @"Watch S7 Cellular (45mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,10"])   return @"Watch SE 2gen (40mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,11"])   return @"Watch SE 2gen (44mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,12"])   return @"Watch SE 2gen Cellular (40mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,13"])   return @"Watch SE 2gen Cellular (44mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,14"])   return @"Watch S8 (41mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,15"])   return @"Watch S8 (45mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,16"])   return @"Watch S8 Cellular (41mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,17"])   return @"Watch S8 Cellular (45mm)";
+        if ([modelIdentifier isEqualToString:@"Watch6,18"])   return @"Watch Ultra 1gen";
     }
 
     if ([modelIdentifier hasPrefix:@"iPhone"])
@@ -142,7 +151,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone12,1"])   return @"iPhone 11";
         if ([modelIdentifier isEqualToString:@"iPhone12,3"])   return @"iPhone 11 Pro";
         if ([modelIdentifier isEqualToString:@"iPhone12,5"])   return @"iPhone 11 Pro Max";
-        if ([modelIdentifier isEqualToString:@"iPhone12,8"])   return @"iPhone SE 2G";
+        if ([modelIdentifier isEqualToString:@"iPhone12,8"])   return @"iPhone SE 2gen";
         if ([modelIdentifier isEqualToString:@"iPhone13,1"])   return @"iPhone 12 mini";
         if ([modelIdentifier isEqualToString:@"iPhone13,2"])   return @"iPhone 12";
         if ([modelIdentifier isEqualToString:@"iPhone13,3"])   return @"iPhone 12 Pro";
@@ -151,7 +160,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone14,3"])   return @"iPhone 13 Pro Max";
         if ([modelIdentifier isEqualToString:@"iPhone14,4"])   return @"iPhone 13 mini";
         if ([modelIdentifier isEqualToString:@"iPhone14,5"])   return @"iPhone 13";
-        if ([modelIdentifier isEqualToString:@"iPhone14,6"])   return @"iPhone SE 3G";
+        if ([modelIdentifier isEqualToString:@"iPhone14,6"])   return @"iPhone SE 3gen";
+        if ([modelIdentifier isEqualToString:@"iPhone14,7"])   return @"iPhone 14";
+        if ([modelIdentifier isEqualToString:@"iPhone14,8"])   return @"iPhone 14 Plus";
+        if ([modelIdentifier isEqualToString:@"iPhone15,2"])   return @"iPhone 14 Pro";
+        if ([modelIdentifier isEqualToString:@"iPhone15,3"])   return @"iPhone 14 Pro Max";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
