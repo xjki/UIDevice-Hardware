@@ -280,17 +280,27 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"AppleTV5,3"])      return @"Apple TV (4gen)";
         if ([modelIdentifier isEqualToString:@"AppleTV6,2"])      return @"Apple TV 4K (1gen)";
         if ([modelIdentifier isEqualToString:@"AppleTV11,1"])     return @"Apple TV 4K (2gen)";
+        if ([modelIdentifier isEqualToString:@"AppleTV14,1"])     return @"Apple TV 4K (3gen)";
     }
 
     // Mac (return only device class, not particular model) https://everymac.com/systems/by_capability/mac-specs-by-machine-model-machine-id.html
     if ([modelIdentifier hasPrefix:@"iMacPro"])            return @"iMac Pro";
     if ([modelIdentifier hasPrefix:@"iMac"])               return @"iMac";
     if ([modelIdentifier hasPrefix:@"Macmini"])            return @"Mac Mini";
+    if ([modelIdentifier hasPrefix:@"Mac14,3"])            return @"Mac Mini"; // Mac Mini M2
+    if ([modelIdentifier hasPrefix:@"Mac14,12"])           return @"Mac Mini"; // Mac Mini M2 Pro
     if ([modelIdentifier hasPrefix:@"MacBookPro"])         return @"MacBook Pro";
+    if ([modelIdentifier hasPrefix:@"Mac14,7"])            return @"MacBook Pro"; // MacBook Pro M2
+    if ([modelIdentifier hasPrefix:@"Mac14,5"] ||
+        [modelIdentifier hasPrefix:@"Mac14,6"])            return @"MacBook Pro"; // MacBook Pro M2 Max
+    if ([modelIdentifier hasPrefix:@"Mac14,9"] ||
+        [modelIdentifier hasPrefix:@"Mac14,10"])           return @"MacBook Pro"; // MacBook Pro M2 Pro
     if ([modelIdentifier hasPrefix:@"MacBookAir"])         return @"Macbook Air";
+    if ([modelIdentifier hasPrefix:@"Mac14,2"])            return @"Macbook Air"; // MacBook Air M2
     if ([modelIdentifier hasPrefix:@"MacBook"])            return @"MacBook";
     if ([modelIdentifier hasPrefix:@"Xserve"])             return @"Xserve";
-    if ([modelIdentifier hasPrefix:@"Mac13"])              return @"Mac Studio"; // "Mac13,1" (Max) and "Mac13,2" (Ultra)
+    if ([modelIdentifier hasPrefix:@"Mac13"])              return @"Mac Studio"; // Mac13,1 = Max Studio M1 Max, Mac13,2 = Max Studio M1 Ultra
+
     
     // Simulator
     if ([modelIdentifier isEqualToString:kiOSSimulatorIdentifier] || [modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
