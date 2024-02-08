@@ -12,7 +12,7 @@
 
 static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
 
-@interface UIDevice (Hardware)
+@interface UIDevice (HardwarePrivate)
 
 - (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier;
 
@@ -266,7 +266,15 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad14,5"])     return @"iPad Pro 12.9″ (6gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,6"])     return @"iPad Pro 12.9″ (6gen, Cellular)";
     }
-
+    
+    
+    if ([modelIdentifier hasPrefix:@"RealityDevice"])
+    {
+        // https://appledb.dev/device/identifier/RealityDevice14,1
+        if ([modelIdentifier isEqualToString:@"RealityDevice14,1"]) return @"Vision Pro (1gen)";
+    }
+    
+         
     if ([modelIdentifier hasPrefix:@"iPod"])
     {
         // iPod http://theiphonewiki.com/wiki/IPod
@@ -339,6 +347,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if ([modelIdentifier hasPrefix:@"iPad"]) return UIDeviceFamilyiPad;
     if ([modelIdentifier hasPrefix:@"AppleTV"]) return UIDeviceFamilyAppleTV;
     if ([modelIdentifier hasPrefix:@"Watch"]) return UIDeviceFamilyWatch;
+    if ([modelIdentifier hasPrefix:@"RealityDevice"]) return UIDeviceFamilyVision;
     if ([modelIdentifier containsString:@"Mac"] || [modelIdentifier hasPrefix:@"Xserve"]) return UIDeviceFamilyMac;
     return UIDeviceFamilyUnknown;
 }

@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
     UIDeviceFamilyAppleTV,
     UIDeviceFamilyWatch,
     UIDeviceFamilyMac,
+    UIDeviceFamilyVision,
     UIDeviceFamilyUnknown,
 };
 
