@@ -336,7 +336,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         [modelIdentifier hasPrefix:@"Mac15,8"]   || // MacBook Pro (M3 Max, 16CPU) 14"
         [modelIdentifier hasPrefix:@"Mac15,9"]   || // MacBook Pro (M3 Max, 16CPU) 16"
         [modelIdentifier hasPrefix:@"Mac15,10"]  || // MacBook Pro (M3 Max, 14CPU) 14""
-        [modelIdentifier hasPrefix:@"Mac15,11"]) || // MacBook Pro (M3 Max, 14CPU) 14""
+        [modelIdentifier hasPrefix:@"Mac15,11"])    // MacBook Pro (M3 Max, 14CPU) 14""
         return @"MacBook Pro";
     
     if ([modelIdentifier hasPrefix:@"Mac14,2"]  || // MacBook Air M2, 13"
