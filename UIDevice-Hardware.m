@@ -203,7 +203,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad13,18"])    return @"iPad (10gen, WiFi)";
         if ([modelIdentifier isEqualToString:@"iPad13,19"])    return @"iPad (10gen, Cellular)";
 
-        // iPad Air: https://www.theiphonewiki.com/wiki/List_of_iPad_Airs
+        // iPad Air: https://theapplewiki.com/wiki/Models
         if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (1gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (1gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air (2gen, Wi-Fi)";
@@ -214,7 +214,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad13,2"])     return @"iPad Air (4gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad13,16"])    return @"iPad Air (5gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad13,17"])    return @"iPad Air (5gen, Cellular)";
-
+        if ([modelIdentifier isEqualToString:@"iPad14,8"])     return @"iPad Air 11″(M2, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad14,9"])     return @"iPad Air 11″(M2, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad14,10"])    return @"iPad Air 13″(M2, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad14,11"])    return @"iPad Air 13″(M2, Cellular)";
+        
         // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
         if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad mini (1gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad2,6"])      return @"iPad mini (1gen, GSM)";
@@ -232,7 +236,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad14,1"])     return @"iPad mini (6gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,2"])     return @"iPad mini (6gen, Cellular)";
 
-        // iPad Pro https://www.theiphonewiki.com/wiki/IPad_Pro
+        // iPad Pro
         if ([modelIdentifier isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7″ (Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=9938&c=apple_ipad_pro_9.7-inch_a1673_wifi_32gb_apple_ipad_6,3
         if ([modelIdentifier isEqualToString:@"iPad6,4"])      return @"iPad Pro 9.7″ (Cellular)"; // http://pdadb.net/index.php?m=specs&id=9981&c=apple_ipad_pro_9.7-inch_a1675_td-lte_32gb_apple_ipad_6,4
         if ([modelIdentifier isEqualToString:@"iPad6,7"])      return @"iPad Pro 12.9″ (1gen, Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=8960&c=apple_ipad_pro_wifi_a1584_128gb
@@ -253,18 +257,22 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad8,10"])     return @"iPad Pro 11″ (2gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad8,11"])     return @"iPad Pro 12.9″ (4gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad8,12"])     return @"iPad Pro 12.9″ (4gen, Cellular)";
-        if ([modelIdentifier isEqualToString:@"iPad13,4"])     return @"iPad Pro 11″ (3gen, Wi-Fi)"; // M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,5"])     return @"iPad Pro 11″ (3gen, Cellular)"; // Cellular with mmWave (US) version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,6"])     return @"iPad Pro 11″ (3gen, Cellular)"; // Global version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,7"])     return @"iPad Pro 11″ (3gen, Cellular)"; // China version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,8"])     return @"iPad Pro 12.9″ (5gen, Wi-Fi)"; // M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,9"])     return @"iPad Pro 12.9″ (5gen, Cellular)"; // Cellular with mmWave (US) version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,10"])    return @"iPad Pro 12.9″ (5gen, Cellular)"; // Global version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad13,11"])    return @"iPad Pro 12.9″ (5gen, Cellular)"; // China version, M1 CPU
-        if ([modelIdentifier isEqualToString:@"iPad14,3"])     return @"iPad Pro 11″ (4gen, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad14,4"])     return @"iPad Pro 11″ (4gen, Cellular)";
-        if ([modelIdentifier isEqualToString:@"iPad14,5"])     return @"iPad Pro 12.9″ (6gen, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad14,6"])     return @"iPad Pro 12.9″ (6gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad13,4"])     return @"iPad Pro 11″ (M1, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad13,5"])     return @"iPad Pro 11″ (M1, Cellular)"; // Cellular with mmWave (US) version
+        if ([modelIdentifier isEqualToString:@"iPad13,6"])     return @"iPad Pro 11″ (M1, Cellular)"; // Global version
+        if ([modelIdentifier isEqualToString:@"iPad13,7"])     return @"iPad Pro 11″ (M1, Cellular)"; // China version
+        if ([modelIdentifier isEqualToString:@"iPad13,8"])     return @"iPad Pro 12.9″ (M1, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad13,9"])     return @"iPad Pro 12.9″ (M1, Cellular)"; // Cellular with mmWave (US) version
+        if ([modelIdentifier isEqualToString:@"iPad13,10"])    return @"iPad Pro 12.9″ (M1, Cellular)"; // Global version
+        if ([modelIdentifier isEqualToString:@"iPad13,11"])    return @"iPad Pro 12.9″ (M1, Cellular)"; // China version
+        if ([modelIdentifier isEqualToString:@"iPad14,3"])     return @"iPad Pro 11″ (M2, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad14,4"])     return @"iPad Pro 11″ (M2, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad14,5"])     return @"iPad Pro 12.9″ (M2, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad14,6"])     return @"iPad Pro 12.9″ (M2, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,3"])     return @"iPad Pro 11″ (M4, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,4"])     return @"iPad Pro 11″ (M4, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,5"])     return @"iPad Pro 13″ (M4, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,6"])     return @"iPad Pro 13″ (M4, Cellular)";
     }
     
     
