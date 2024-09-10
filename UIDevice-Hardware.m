@@ -174,6 +174,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone15,5"])   return @"iPhone 15 Plus";
         if ([modelIdentifier isEqualToString:@"iPhone16,1"])   return @"iPhone 15 Pro";
         if ([modelIdentifier isEqualToString:@"iPhone16,2"])   return @"iPhone 15 ProMax";
+        if ([modelIdentifier isEqualToString:@"iPhone17,3"])   return @"iPhone 16";
+        if ([modelIdentifier isEqualToString:@"iPhone17,4"])   return @"iPhone 16 Plus";
+        if ([modelIdentifier isEqualToString:@"iPhone17,1"])   return @"iPhone 16 Pro";
+        if ([modelIdentifier isEqualToString:@"iPhone17,2"])   return @"iPhone 16 ProMax";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
