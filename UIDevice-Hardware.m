@@ -182,6 +182,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone17,4"])   return @"iPhone 16 Plus";
         if ([modelIdentifier isEqualToString:@"iPhone17,1"])   return @"iPhone 16 Pro";
         if ([modelIdentifier isEqualToString:@"iPhone17,2"])   return @"iPhone 16 Pro Max";
+        if ([modelIdentifier isEqualToString:@"iPhone17,5"])   return @"iPhone 16e";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
@@ -243,6 +244,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad11,2"])     return @"iPad mini (5gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad14,1"])     return @"iPad mini (6gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,2"])     return @"iPad mini (6gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,1"])     return @"iPad mini (7gen, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,2"])     return @"iPad mini (7gen, Cellular)";
 
         // iPad Pro
         if ([modelIdentifier isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7″ (Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=9938&c=apple_ipad_pro_9.7-inch_a1673_wifi_32gb_apple_ipad_6,3
