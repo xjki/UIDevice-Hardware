@@ -211,6 +211,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad12,2"])     return @"iPad (9gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad13,18"])    return @"iPad (10gen, WiFi)";
         if ([modelIdentifier isEqualToString:@"iPad13,19"])    return @"iPad (10gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad15,7"])    return @"iPad (A16, WiFi)";
+        if ([modelIdentifier isEqualToString:@"iPad15,8"])    return @"iPad (A16, Cellular)";
 
         // iPad Air: https://theapplewiki.com/wiki/Models
         if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (1gen, Wi-Fi)";
@@ -227,7 +229,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad14,9"])     return @"iPad Air 11″(M2, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad14,10"])    return @"iPad Air 13″(M2, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,11"])    return @"iPad Air 13″(M2, Cellular)";
-        
+        if ([modelIdentifier isEqualToString:@"iPad15,3"])    return @"iPad Air 11″(M3, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad15,4"])    return @"iPad Air 11″(M3, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad15,5"])    return @"iPad Air 13″(M3, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad15,6"])    return @"iPad Air 13″(M3, Cellular)";
+
         // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
         if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad mini (1gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad2,6"])      return @"iPad mini (1gen, GSM)";
@@ -244,8 +250,8 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad11,2"])     return @"iPad mini (5gen, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad14,1"])     return @"iPad mini (6gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,2"])     return @"iPad mini (6gen, Cellular)";
-        if ([modelIdentifier isEqualToString:@"iPad16,1"])     return @"iPad mini (7gen, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad16,2"])     return @"iPad mini (7gen, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,1"])     return @"iPad mini (A17 Pro, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,2"])     return @"iPad mini (A17 Pro, Cellular)";
 
         // iPad Pro
         if ([modelIdentifier isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7″ (Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=9938&c=apple_ipad_pro_9.7-inch_a1673_wifi_32gb_apple_ipad_6,3
