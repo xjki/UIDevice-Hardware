@@ -120,6 +120,12 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"Watch7,9"])    return @"Watch S10 (46mm)";
         if ([modelIdentifier isEqualToString:@"Watch7,10"])   return @"Watch S10 Cellular (42mm)";
         if ([modelIdentifier isEqualToString:@"Watch7,11"])   return @"Watch S10 Cellular (46mm)";
+        if ([modelIdentifier isEqualToString:@"Watch7,12"])   return @"Watch Ultra 3gen";
+        if ([modelIdentifier isEqualToString:@"Watch7,17"])   return @"Watch S11 (42mm)";
+        if ([modelIdentifier isEqualToString:@"Watch7,18"])   return @"Watch S11 (46mm)";
+        if ([modelIdentifier isEqualToString:@"Watch7,19"])   return @"Watch S11 Cellular (42mm)";
+        if ([modelIdentifier isEqualToString:@"Watch7,20"])   return @"Watch S11 Cellular (46mm)";
+
     }
 
     if ([modelIdentifier hasPrefix:@"iPhone"])
@@ -183,6 +189,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone17,1"])   return @"iPhone 16 Pro";
         if ([modelIdentifier isEqualToString:@"iPhone17,2"])   return @"iPhone 16 Pro Max";
         if ([modelIdentifier isEqualToString:@"iPhone17,5"])   return @"iPhone 16e";
+        if ([modelIdentifier isEqualToString:@"iPhone18,1"])   return @"iPhone 17 Pro";
+        if ([modelIdentifier isEqualToString:@"iPhone18,2"])   return @"iPhone 17 Pro Max";
+        if ([modelIdentifier isEqualToString:@"iPhone18,3"])   return @"iPhone 17";
+        if ([modelIdentifier isEqualToString:@"iPhone18,4"])   return @"iPhone Air";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
