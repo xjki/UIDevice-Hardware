@@ -300,6 +300,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad16,4"])     return @"iPad Pro 11″ (M4, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad16,5"])     return @"iPad Pro 13″ (M4, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad16,6"])     return @"iPad Pro 13″ (M4, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad17,1"])     return @"iPad Pro 13″ (M5, Wi-F)";
+        if ([modelIdentifier isEqualToString:@"iPad17,2"])     return @"iPad Pro 11″ (M5, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad17,3"])     return @"iPad Pro 13″ (M5, Wi-F)";
+        if ([modelIdentifier isEqualToString:@"iPad17,4"])     return @"iPad Pro 13″ (M5, Cellular)";
+
     }
     
     
@@ -307,6 +312,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     {
         // https://appledb.dev/device/identifier/RealityDevice14,1
         if ([modelIdentifier isEqualToString:@"RealityDevice14,1"]) return @"Vision Pro (1gen)";
+        if ([modelIdentifier isEqualToString:@"RealityDevice17,1"]) return @"Vision Pro (M5)";
     }
     
          
@@ -362,8 +368,9 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         [modelIdentifier hasPrefix:@"Mac15,7"]   || // MacBook Pro (M3 Pro) 16"
         [modelIdentifier hasPrefix:@"Mac15,8"]   || // MacBook Pro (M3 Max, 16CPU) 14"
         [modelIdentifier hasPrefix:@"Mac15,9"]   || // MacBook Pro (M3 Max, 16CPU) 16"
-        [modelIdentifier hasPrefix:@"Mac15,10"]  || // MacBook Pro (M3 Max, 14CPU) 14""
-        [modelIdentifier hasPrefix:@"Mac15,11"])    // MacBook Pro (M3 Max, 14CPU) 14""
+        [modelIdentifier hasPrefix:@"Mac15,10"]  || // MacBook Pro (M3 Max, 14CPU) 14"
+        [modelIdentifier hasPrefix:@"Mac15,11"]) || // MacBook Pro (M3 Max, 14CPU) 14"
+        [modelIdentifier hasPrefix:@"Mac17,2"])     // MacBook Pro (M5) 14"
         return @"MacBook Pro";
     
     if ([modelIdentifier hasPrefix:@"Mac14,2"]  || // MacBook Air M2, 13"
