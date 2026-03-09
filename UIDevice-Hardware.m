@@ -193,6 +193,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone18,2"])   return @"iPhone 17 Pro Max";
         if ([modelIdentifier isEqualToString:@"iPhone18,3"])   return @"iPhone 17";
         if ([modelIdentifier isEqualToString:@"iPhone18,4"])   return @"iPhone Air";
+        if ([modelIdentifier isEqualToString:@"iPhone18,5"])   return @"iPhone 17e";
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
