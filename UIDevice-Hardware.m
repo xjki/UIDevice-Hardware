@@ -240,11 +240,15 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPad14,9"])     return @"iPad Air 11″(M2, Cellular)";
         if ([modelIdentifier isEqualToString:@"iPad14,10"])    return @"iPad Air 13″(M2, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad14,11"])    return @"iPad Air 13″(M2, Cellular)";
-        if ([modelIdentifier isEqualToString:@"iPad15,3"])    return @"iPad Air 11″(M3, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad15,4"])    return @"iPad Air 11″(M3, Cellular)";
-        if ([modelIdentifier isEqualToString:@"iPad15,5"])    return @"iPad Air 13″(M3, Wi-Fi)";
-        if ([modelIdentifier isEqualToString:@"iPad15,6"])    return @"iPad Air 13″(M3, Cellular)";
-
+        if ([modelIdentifier isEqualToString:@"iPad15,3"])     return @"iPad Air 11″(M3, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad15,4"])     return @"iPad Air 11″(M3, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad15,5"])     return @"iPad Air 13″(M3, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad15,6"])     return @"iPad Air 13″(M3, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,8"])     return @"iPad Air 11″(M4, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,9"])     return @"iPad Air 11″(M4, Cellular)";
+        if ([modelIdentifier isEqualToString:@"iPad16,10"])    return @"iPad Air 13″(M4, Wi-Fi)";
+        if ([modelIdentifier isEqualToString:@"iPad16,11"])    return @"iPad Air 13″(M4, Cellular)";
+        
         // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
         if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad mini (1gen, Wi-Fi)";
         if ([modelIdentifier isEqualToString:@"iPad2,6"])      return @"iPad mini (1gen, GSM)";
