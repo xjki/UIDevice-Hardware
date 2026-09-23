@@ -125,7 +125,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"Watch7,18"])   return @"Watch S11 (46mm)";
         if ([modelIdentifier isEqualToString:@"Watch7,19"])   return @"Watch S11 Cellular (42mm)";
         if ([modelIdentifier isEqualToString:@"Watch7,20"])   return @"Watch S11 Cellular (46mm)";
-
+        if ([modelIdentifier isEqualToString:@"Watch8,1"])    return @"Watch Ultra 4gen";
+        if ([modelIdentifier isEqualToString:@"Watch8,2"])    return @"Watch S12 (42mm)";
+        if ([modelIdentifier isEqualToString:@"Watch8,3"])    return @"Watch S12 (46mm)";
+        if ([modelIdentifier isEqualToString:@"Watch8,4"])    return @"Watch S12 Cellular (42mm)";
+        if ([modelIdentifier isEqualToString:@"Watch8,5"])    return @"Watch S12 Cellular (46mm)";
     }
 
     if ([modelIdentifier hasPrefix:@"iPhone"])
@@ -194,6 +198,10 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         if ([modelIdentifier isEqualToString:@"iPhone18,3"])   return @"iPhone 17";
         if ([modelIdentifier isEqualToString:@"iPhone18,4"])   return @"iPhone Air";
         if ([modelIdentifier isEqualToString:@"iPhone18,5"])   return @"iPhone 17e";
+        if ([modelIdentifier isEqualToString:@"iPhone19,2"])   return @"iPhone 18 Pro";
+        if ([modelIdentifier isEqualToString:@"iPhone19,3"])   return @"iPhone 18 Pro Max"; // US, Qualcomm modem
+        if ([modelIdentifier isEqualToString:@"iPhone19,4"])   return @"iPhone Duo";
+        if ([modelIdentifier isEqualToString:@"iPhone19,7"])   return @"iPhone 18 Pro Max"; // Global
     }
 
     if ([modelIdentifier hasPrefix:@"iPad"])
@@ -356,7 +364,11 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
     if ([modelIdentifier hasPrefix:@"Xserve"])             return @"Xserve";
 
     if ([modelIdentifier hasPrefix:@"Mac14,3"]  || // Mac Mini M2
-        [modelIdentifier hasPrefix:@"Mac14,12"])   // Mac Mini M2 Pro
+        [modelIdentifier hasPrefix:@"Mac14,12"] || // Mac Mini M2 Pro
+        [modelIdentifier hasPrefix:@"Mac16,10"] || // Mac Mini M4
+        [modelIdentifier hasPrefix:@"Mac16,11"] || // Mac Mini M4 Pro
+        [modelIdentifier hasPrefix:@"Mac17,16"] || // Mac Mini M5 Pro
+        [modelIdentifier hasPrefix:@"Mac18,5"])    // Mac Mini M6
         return @"Mac Mini";
     
     if ([modelIdentifier hasPrefix:@"Mac15,4"]  || // iMac M3, 8GPU
@@ -375,18 +387,33 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         [modelIdentifier hasPrefix:@"Mac15,9"]   || // MacBook Pro (M3 Max, 16CPU) 16"
         [modelIdentifier hasPrefix:@"Mac15,10"]  || // MacBook Pro (M3 Max, 14CPU) 14"
         [modelIdentifier hasPrefix:@"Mac15,11"]  || // MacBook Pro (M3 Max, 14CPU) 14"
-        [modelIdentifier hasPrefix:@"Mac17,2"])     // MacBook Pro (M5) 14"
+        [modelIdentifier hasPrefix:@"Mac17,2"]   || // MacBook Pro (M5) 14"
+        [modelIdentifier hasPrefix:@"Mac17,7"]   || // MacBook Pro (M5 Max) 14"
+        [modelIdentifier hasPrefix:@"Mac17,9"]   || // MacBook Pro (M5 Pro) 14"
+        [modelIdentifier hasPrefix:@"Mac17,6"]   || // MacBook Pro (M5 Max) 16"
+        [modelIdentifier hasPrefix:@"Mac17,8"])     // MacBook Pro (M5 Pro) 16"
         return @"MacBook Pro";
     
     if ([modelIdentifier hasPrefix:@"Mac14,2"]  || // MacBook Air M2, 13"
         [modelIdentifier hasPrefix:@"Mac14,15"] || // MacBook Air M2, 15"
         [modelIdentifier hasPrefix:@"Mac15,12"] || // MacBook Air M3, 13"
-        [modelIdentifier hasPrefix:@"Mac15,13"])   // MacBook Air M3, 15"
+        [modelIdentifier hasPrefix:@"Mac15,13"] || // MacBook Air M3, 15"
+        [modelIdentifier hasPrefix:@"Mac16,12"] || // MacBook Air M4, 13"
+        [modelIdentifier hasPrefix:@"Mac16,13"] || // MacBook Air M4, 15"
+        [modelIdentifier hasPrefix:@"Mac17,3"]  || // MacBook Air M5, 13"
+        [modelIdentifier hasPrefix:@"Mac17,4"])    // MacBook Air M5, 15"
         return @"Macbook Air";
     
-    if ([modelIdentifier hasPrefix:@"Mac13"]    || // Mac13,1 = Max Studio M1 Max, Mac13,2 = Max Studio M1 Ultra
-        [modelIdentifier hasPrefix:@"Mac14,13"] || // Mac Studio M2 Max
-        [modelIdentifier hasPrefix:@"Mac14,14"])   // Mac Studio M2 Ultra
+    if ([modelIdentifier hasPrefix:@"Mac17,5"])  || // MacBook Neo, A18 Pro, 13"
+        return @"Macbook Neo";
+    
+    if ([modelIdentifier hasPrefix:@"Mac13"]     || // Mac13,1 = Max Studio M1 Max, Mac13,2 = Max Studio M1 Ultra
+        [modelIdentifier hasPrefix:@"Mac14,13"]  || // Mac Studio M2 Max
+        [modelIdentifier hasPrefix:@"Mac14,14"]  || // Mac Studio M2 Ultra
+        [modelIdentifier hasPrefix:@"Mac15,14"]  || // Mac Studio M3 Ultra
+        [modelIdentifier hasPrefix:@"Mac16,9"]   || // Mac Studio M4 Max
+        [modelIdentifier hasPrefix:@"Mac17,14"]  || // Mac Studio M5 Max
+        [modelIdentifier hasPrefix:@"Mac17,15"]) || // Mac Studio M5 Ultra
         return @"Mac Studio";
 
     if ([modelIdentifier hasPrefix:@"MacPro"] ||  // Intel Mac Pro
