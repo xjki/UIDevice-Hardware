@@ -404,7 +404,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         [modelIdentifier hasPrefix:@"Mac17,4"])    // MacBook Air M5, 15"
         return @"Macbook Air";
     
-    if ([modelIdentifier hasPrefix:@"Mac17,5"])  || // MacBook Neo, A18 Pro, 13"
+    if ([modelIdentifier hasPrefix:@"Mac17,5"])    // MacBook Neo, A18 Pro, 13"
         return @"Macbook Neo";
     
     if ([modelIdentifier hasPrefix:@"Mac13"]     || // Mac13,1 = Max Studio M1 Max, Mac13,2 = Max Studio M1 Ultra
@@ -413,7 +413,7 @@ static NSString * const kiOSSimulatorIdentifier = @"iOS Simulator";
         [modelIdentifier hasPrefix:@"Mac15,14"]  || // Mac Studio M3 Ultra
         [modelIdentifier hasPrefix:@"Mac16,9"]   || // Mac Studio M4 Max
         [modelIdentifier hasPrefix:@"Mac17,14"]  || // Mac Studio M5 Max
-        [modelIdentifier hasPrefix:@"Mac17,15"]) || // Mac Studio M5 Ultra
+        [modelIdentifier hasPrefix:@"Mac17,15"])    // Mac Studio M5 Ultra
         return @"Mac Studio";
 
     if ([modelIdentifier hasPrefix:@"MacPro"] ||  // Intel Mac Pro
